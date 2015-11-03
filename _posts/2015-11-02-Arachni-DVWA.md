@@ -19,7 +19,7 @@ Arachni. The auto-login plugin can be challenging to get configured
 correctly and it is typically easier to use a login script to
 authenticate Arachni:
 
-login.rb:
+###### login.rb:
 
 ```ruby
 response = http.post( 'http://127.0.0.2/dvwa/login.php',
@@ -41,6 +41,7 @@ Various pages throughout DVWA can trigger conditions where the session
 will be invalidated or where web application defensive measures (i.e.
 PHPIDS) can be triggered. By running the Arachni command line client with
 the following exclusions, you can typically get great results:
+
 
 ```bash
 ./bin/arachni --plugin=login_script:script=~/login.rb \
