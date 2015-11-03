@@ -20,6 +20,7 @@ correctly and it is typically easier to use a login script to
 authenticate Arachni:
 
 login.rb:
+
 ```
 response = http.post( 'http://127.0.0.2/dvwa/login.php',
     parameters:     {
