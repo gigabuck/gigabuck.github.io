@@ -20,7 +20,7 @@ correctly and it is typically easier to use a login script to
 authenticate Arachni:
 
 login.rb:
-'''
+```
 response = http.post( 'http://127.0.0.2/dvwa/login.php',
     parameters:     {
         'username'   => 'user',
@@ -34,14 +34,14 @@ response = http.post( 'http://127.0.0.2/dvwa/login.php',
 framework.options.session.check_url     = to_absolute(
 response.headers.location, response.url )
 framework.options.session.check_pattern = 'Logout'
-'''
+```
 
 Various pages throughout DVWA can trigger conditions where the session
 will be invalidated or where web application defensive measures (i.e.
 PHPIDS) can be triggered. By running the Arachni command line client with
 the following exclusions, you can typically get great results:
 
-'''
+```
 ./bin/arachni --plugin=login_script:script=/tmp/login.rb \
  --checks=* \
  --scope-exclude-pattern='\/dvwa\/logout\.php' \
@@ -51,7 +51,7 @@ the following exclusions, you can typically get great results:
  --http-cookie-string="security=low" \ 
  --report-save-path '~/DVWA.afr' \
  http://127.0.0.2/dvwa/
-'''
+```
 
 Here's an example of some of the vulnerabilities found:
 ![arachni dvwa scan results]({{ site.baseurl }}/images/arachni.png
