@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-Just here for the vulns!
+Carpe 0-diem!
 
 ### Contact me
 
