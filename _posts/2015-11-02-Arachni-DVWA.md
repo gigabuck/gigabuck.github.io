@@ -3,13 +3,13 @@ layout: post
 title: Scanning DVWA With Arachni
 ---
 
-DVWA (Damn Vulnerable Web App) is a puposefully vulnerable web
+DVWA (Damn Vulnerable Web App) is a purposefully vulnerable web
 application that is a teaching tool for exploiting common web application
 vulnerabilities. These vulnerabilties include SQL Injection,
 Cross-site Scripting, Remote File Inclusion, Command Execution, and
 various Information Disclosure vulnerabilities. Although DVWA was not
-designed to be used to evaluate web application vulnerability scanners,
-it may be typically used and scanners can run into configuration issues
+intended to be used to evaluate web application vulnerability scanners,
+it may be typically required in an evaluation and scanners can run into configuration issues
 preventing a successfuly scan of DVWA. We will look at some of the
 common configuration issues you may run into with scanning DVWA with the
 Arachni web application vulnerability scanner.
