@@ -12,7 +12,7 @@ intended to be used to evaluate web application vulnerability scanners,
 it may be typically required in an evaluation and scanners can run into configuration issues
 preventing a successfuly scan of DVWA. We will look at some of the
 common configuration issues you may run into with scanning DVWA with the
-Arachni web application vulnerability scanner.
+Arachni web application vulnerability scanner and how to address those.
 
 The first issue that you may run into is authenticating to DVWA with
 Arachni. The auto-login plugin can be challenging to get configured
@@ -42,7 +42,6 @@ will be invalidated or where web application defensive measures (i.e.
 PHPIDS) can be triggered. By running the Arachni command line client with
 the following exclusions, you can typically get great results:
 
-
 ```bash
 ./bin/arachni --plugin=login_script:script=~/login.rb \
  --checks=* \
@@ -56,6 +55,12 @@ the following exclusions, you can typically get great results:
 ```
 
 Here's an example of some of the vulnerabilities found:
+
 ![arachni dvwa scan results]({{ site.baseurl }}/images/arachni.png
 "Arachni Results")
 
+From reviewing the results, there are very few false positives found.
+The few false negatives found are issues due to the page exclusions or
+issues not easily discovered through automated dynamic analysis. Let me
+know your experiences down in the comments or any suggestions on how to
+better configure the scan.
