@@ -43,7 +43,7 @@ PHPIDS) can be triggered. By running the Arachni command line client with
 the following exclusions, you can typically get great results:
 
 ```
-./bin/arachni --plugin=login_script:script=/tmp/login.rb \
+./bin/arachni --plugin=login_script:script=~/login.rb \
  --checks=* \
  --scope-exclude-pattern='\/dvwa\/logout\.php' \
  --scope-exclude-pattern='\/dvwa\/vulnerabilities\/csrf\/' \
