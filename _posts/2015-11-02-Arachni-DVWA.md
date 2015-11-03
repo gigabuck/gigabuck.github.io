@@ -21,7 +21,7 @@ authenticate Arachni:
 
 login.rb:
 
-```
+```ruby
 response = http.post( 'http://127.0.0.2/dvwa/login.php',
     parameters:     {
         'username'   => 'user',
@@ -42,7 +42,7 @@ will be invalidated or where web application defensive measures (i.e.
 PHPIDS) can be triggered. By running the Arachni command line client with
 the following exclusions, you can typically get great results:
 
-```
+```bash
 ./bin/arachni --plugin=login_script:script=~/login.rb \
  --checks=* \
  --scope-exclude-pattern='\/dvwa\/logout\.php' \
